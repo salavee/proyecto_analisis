@@ -9,16 +9,16 @@ class Almacen{
 	private:
 		producto *Producto;
 		vector<producto*> ListaProductos;
-//		vector<Factura*> ListaFacturas;
+		vector<Factura*> ListaFacturas;
 	public:
 		Almacen();
 		producto* getProducto();
 		void visualizarProductos();
-//		void visualizarFacturas();
+		void visualizarFacturas();
 //		void visualizarProveedor(producto*);
 		void agregar_Producto(producto*);
-//		void agregar_Factura(Factura*);
-		void buscar_Producto(producto*);
+		void agregar_Factura(Factura*);
+		void modificar_precio(string);
 		
 };
 
@@ -41,7 +41,8 @@ class Almacen{
 	
 	Almacen::Almacen(){		
 	}
-/*	void Almacen::visualizarFacturas(){
+	
+	void Almacen::visualizarFacturas(){
 		
 		if(ListaFacturas.size()>0){		
 			for(int i=0;i<ListaFacturas.size();i++){
@@ -51,32 +52,32 @@ class Almacen{
 		else{
 			cout<<"Aun no hay Facturas registradas"<<endl;
 		}
-	}*/
+	}
 	
 	void Almacen::agregar_Producto(producto *product){
 		ListaProductos.push_back(product);
 	}
 
-/*	void Almacen::agregar_Factura(producto *factu){
+	void Almacen::agregar_Factura(Factura *factu){
 		ListaFacturas.push_back(factu);
-	}*/	
+	}
 	
-//	void Almacen::buscar_Producto(producto *nombre){
-	/*	vector<producto*>::iterator p = ListaProductos.begin();
+	void Almacen::modificar_precio(string nombre){
+		vector<producto*>::iterator p = ListaProductos.begin();
 		
+		int i=0;
+		float precio_new;
 		while( p != ListaProductos.end() ){
-			if( p -> getProducto() == nombre){
+			if( ListaProductos[i]-> getnombre() == nombre){
+				cout<<endl<<ListaProductos[i] -> getnombre()<<endl;
+				cout<<"Ingrese nuevo precio: ";cin>>precio_new;
 				
-			}
-		}*/
-/*		for(int i=0;i<ListaProductos.size();i++){
-			if(ListaProductos[i] -> getProducto() == nombre){
-				cout<<ListaProductos[i] -> getProducto() <<endl;
-				cout<<"Ingrese precio: ";cin>>precio;
-				ListaProductos[i] -> setcost_unt() = precio;
-				cout<<"Precio Registrado";
-			}
+				ListaProductos[i] -> setprecio_venta(precio_new);
+				
+				cout<<"\nModificacion guardada"<<endl;
+				break;
+			} 
+			i++;
 		}
-		return -1;
-	}*/ 
+	}
 	
