@@ -23,7 +23,7 @@ class producto
 		int getstock()	{  return stock;  }
 		string getcategoria()	{  return categoria;  }
 		float getprecio_venta()	{  return precio_venta;  }
-		
+		producto(string,float,int,string,float);
 		void ingre_datos();
 		void mostrar_datos();
 };
@@ -40,7 +40,14 @@ void producto::ingre_datos()
 	cout<<"Ingrese precio d/venta: ";cin>>precio_venta;
 //	cout<<"\nIngrese el estada: ";cin>>estado;
 }
-
+producto::producto(string _nombre,float _cost_un,int _stock,string _categoria,float _precio_venta)
+{
+	nombre=_nombre;
+	cost_unt=_cost_un;
+	stock=_stock;
+	categoria=_categoria;
+	precio_venta=_precio_venta;
+}
 void producto::mostrar_datos()
 {
 	cout<<nombre;
