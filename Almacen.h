@@ -19,7 +19,7 @@ class Almacen{
 		void agregar_Producto(producto*);
 //		void agregar_Factura(Factura*);
 		void buscar_Producto(producto*);
-		
+		void eliminar_Producto(string);
 };
 
 	producto* Almacen::getProducto(){
@@ -52,7 +52,32 @@ class Almacen{
 			cout<<"Aun no hay Facturas registradas"<<endl;
 		}
 	}*/
-	
+	void Almacen::eliminar_Producto(string _nombre)
+	{
+		int c=0;
+		if(ListaProductos.size()<0)
+		{
+			
+		}
+		else 
+		{
+			for(int i=0;i<ListaProducto.size();i++)
+			{
+				if(ListaProductos[i].getproducto()==_nombre)
+				{
+					if(i=ListaProducto.size()-1)
+					{
+						ListaProductos.pop_back();
+					}
+					else
+					{
+						swap(ListaProductos[i],ListaProducto[i+1]);
+					}
+				}
+				
+			}	
+		}
+	}
 	void Almacen::agregar_Producto(producto *product){
 		ListaProductos.push_back(product);
 	}
