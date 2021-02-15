@@ -1,17 +1,12 @@
 #include <iostream>
 #include <string>
 #include "factu.h"
-#include <iostream>
-#include <string>
-#include "factu.h"
 #include "Product.h"
 #include "Almacen.h"
 #include <conio.h>
 #include <stdlib.h>
 #include <fstream>
 using namespace std;
-
-void archi();
 
 int main()
 {
@@ -26,9 +21,9 @@ int main()
 	A1.visualizarProductos();*/
 	
 	producto Produc[2];
-	Factura fact1;
 	Almacen A1;
 	int i = 0;
+	string nombre;
 	
 	do{
 		Produc[i].ingre_datos();
@@ -37,26 +32,22 @@ int main()
 		i++;	
 	}while(i<2);
 	
-	fact1.IngresarFactura();
-	A1.agregar_Factura(&fact1);
+	A1.visualizarProductos(); 
+	cout<<"\nIngrese el nombre del elemento a modificar: ";cin>>nombre;
+	A1.modificar_precio(nombre);
 	cout<<endl;
-//	A1.visualizarProductos(); 	
-//	A1.visualizarFacturas();
+	A1.visualizarProductos(); 	
 	
-	return 0;
-}	
-
-/*void archi(){
-		
-	ofstream archiProd;
-	archiProd.open("Archivo_Productos.txt",ios::out);
+/*	ofstream archivo_Productos;
+	archivo_Productos.open("d://CURSOS 4TO CICLO//Analisis de Sistemas//prueba 3//Archivo_Productos.txt",ios::out);
 	
-	if(archiProd.fail()){
+	if(archivo_Productos.fail()){
 		cout<<"No se pudo abrir archivo";
 		exit(1);
 	}
 	
-	archiProd<<"nanogetline"<<endl;
-	archiProd.close();
-
-}*/
+	archivo_Productos<<"Creando un archivo"<<endl;
+	
+	//archivo_Productos.close();*/
+	return 0;
+}	
