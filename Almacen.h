@@ -57,21 +57,21 @@ class Almacen{
 		int c=0;
 		if(ListaProductos.size()<0)
 		{
-			
+			cout<<"No hay PRODUCTO";
 		}
 		else 
 		{
-			for(int i=0;i<ListaProducto.size();i++)
+			for(int i=0;i<ListaProductos.size();i++)
 			{
-				if(ListaProductos[i].getproducto()==_nombre)
+				if(ListaProductos[i]->getnombre()==_nombre)
 				{
-					if(i=ListaProducto.size()-1)
+					if(i==ListaProductos.size()-1)
 					{
 						ListaProductos.pop_back();
 					}
 					else
 					{
-						swap(ListaProductos[i],ListaProducto[i+1]);
+						swap(ListaProductos[i],ListaProductos[i+1]);
 					}
 				}
 				

@@ -23,7 +23,7 @@ class producto
 		int getstock()	{  return stock;  }
 		string getcategoria()	{  return categoria;  }
 		float getprecio_venta()	{  return precio_venta;  }
-		producto(string,float,int,string,float)
+		producto(string,float,int,string,float);
 		void ingre_datos();
 		void mostrar_datos();
 };

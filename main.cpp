@@ -3,8 +3,8 @@
 #include "factu.h"
 #include <iostream>
 #include <string>
-#include "factu.h"
-#include "Product.h"
+//#include "factu.h"
+#include "producto.h"
 #include "Almacen.h"
 #include <conio.h>
 #include <stdlib.h>
@@ -25,8 +25,8 @@ int main()
 	cout<<endl;
 	A1.visualizarProductos();*/
 	
-	producto Produc[2];
-	Factura fact1;
+	producto Produc[3];
+	//Factura fact1;
 	Almacen A1;
 	int i = 0;
 	
@@ -35,15 +35,22 @@ int main()
 		A1.agregar_Producto(&Produc[i]);
 		system("cls");
 		i++;	
-	}while(i<2);
+	}while(i<3);
 	
-	fact1.IngresarFactura();
-	A1.agregar_Factura(&fact1);
+	//fact1.IngresarFactura();
+	//A1.agregar_Factura(&fact1);
+	
 	cout<<endl;
-//	A1.visualizarProductos(); 	
+	A1.visualizarProductos();
+	getch();
+	system("CLS");
+	string nombre;
+	cin>>nombre;
+	A1.eliminar_Producto(nombre);
+	A1.visualizarProductos(); 	
 //	A1.visualizarFacturas();
 	
-	return 0;
+	//return 0;
 }	
 
 /*void archi(){
