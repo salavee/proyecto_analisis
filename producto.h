@@ -2,8 +2,8 @@
 #include<string.h>
 #include<string>
 using namespace std;
-class producto
-{
+
+class producto{
 	private:
 			string nombre;
 			float cost_unt;
@@ -50,10 +50,10 @@ producto::producto(string _nombre,float _cost_un,int _stock,string _categoria,fl
 }
 void producto::mostrar_datos()
 {
-	cout<<nombre;
-	cout<<endl<<cost_unt;
-	cout<<endl<<stock;
-	cout<<endl<<categoria;
-	cout<<endl<<precio_venta<<endl;
+	cout<<"Nombre: "<<nombre;
+	cout<<endl<<"Costo Unitario: "<<cost_unt;
+	cout<<endl<<"Stock: "<<stock;
+	cout<<endl<<"Categoria: "<<categoria;
+	cout<<endl<<"Precio d/venta: "<<precio_venta<<endl<<endl;
 //	cout<<endl<<estado;
 }
