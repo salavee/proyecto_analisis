@@ -12,27 +12,27 @@ class Almacen{
 		Almacen();
 		producto* getProducto();
 		void visualizarProductos();
-		void visualizarFacturas();
+		//void visualizarFacturas();
 //		void visualizarProveedor(producto*);
 		void agregar_Producto(producto*);
-<<<<<<< HEAD
 //<<<<<<< HEAD
-		void agregar_Factura(Factura*);
+//<<<<<<< HEAD
+		//void agregar_Factura(Factura*);
 		void modificar_precio(string);
 		
 //=======
-=======
-	//	void agregar_Factura(Factura*);
+//=======
+		//void agregar_Factura(Factura*);
 		void modificar_precio(string);
 		
->>>>>>> 424501090c461a636a09b8e7bc937b20502e7721
+//>>>>>>> 424501090c461a636a09b8e7bc937b20502e7721
 //		void agregar_Factura(Factura*);
 		void buscar_Producto(string);
 		void eliminar_Producto(string);
-<<<<<<< HEAD
+//<<<<<<< HEAD
 //>>>>>>> a113f3870ae809d1b2284e8bf295e890231060b5
-=======
->>>>>>> 424501090c461a636a09b8e7bc937b20502e7721
+///=======
+//>>>>>>> 424501090c461a636a09b8e7bc937b20502e7721
 };
 	
 	Almacen::Almacen(){		
@@ -50,10 +50,10 @@ class Almacen{
 		}
 
 	}
-<<<<<<< HEAD
+//<<<<<<< HEAD
 		
-	void Almacen::visualizarFacturas(){
-=======
+//	void Almacen::visualizarFacturas(){
+//=======
 	
 	Almacen::Almacen(){		
 	}
@@ -75,9 +75,9 @@ class Almacen{
 	
 //=======
 //	}*/
-=======
-}*/
->>>>>>> 424501090c461a636a09b8e7bc937b20502e7721
+//=======
+}//*/
+//>>>>>>> 424501090c461a636a09b8e7bc937b20502e7721
 	void Almacen::eliminar_Producto(string _nombre)
 	{
 		int c=0;
@@ -104,10 +104,10 @@ class Almacen{
 			}	
 		}
 	}
-<<<<<<< HEAD
+///<<<<<<< HEAD
 //>>>>>>> a113f3870ae809d1b2284e8bf295e890231060b5
-=======
->>>>>>> 424501090c461a636a09b8e7bc937b20502e7721
+//=======
+//>>>>>>> 424501090c461a636a09b8e7bc937b20502e7721
 	void Almacen::agregar_Producto(producto *product){
 		ListaProductos.push_back(product);
 	}

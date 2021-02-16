@@ -13,6 +13,7 @@
 #include <conio.h>
 #include <stdlib.h>
 #include <fstream>
+#include "almacenero.h"
 using namespace std;
 
 int main()
@@ -28,7 +29,7 @@ int main()
 	A1.visualizarProductos();*/
 	
 //<<<<<<< HEAD
-	producto Produc[2];
+//	producto Produc[2];
 //=======
 //	producto Produc[3];
 	//Factura fact1;
@@ -36,20 +37,25 @@ int main()
 	Almacen A1;
 	int i = 0;
 	string nombre;
-	
+	producto Produc[3];
 	do{
 		Produc[i].ingre_datos();
 		A1.agregar_Producto(&Produc[i]);
 		system("cls");
 		i++;	
 	}while(i<2);
+	almacenero a;
+	A1.visualizarProductos();
+	a.actualizar(&A1);
+	A1.visualizarProductos();
+	getch();
 	
 	//fact1.IngresarFactura();
 	//A1.agregar_Factura(&fact1);
 	
 //<<<<<<< HEAD
 //	A1.visualizarProductos(); 
-	cout<<"\nIngrese el nombre del elemento a modificar: ";cin>>nombre;
+/*	cout<<"\nIngrese el nombre del elemento a modificar: ";cin>>nombre;
 	A1.modificar_precio(nombre);
 	cout<<endl;
 	A1.visualizarProductos(); 	
@@ -84,5 +90,6 @@ int main()
 	archivo_Productos<<"Creando un archivo"<<endl;
 	
 	//archivo_Productos.close();*/
+	
 	return 0;
 }	

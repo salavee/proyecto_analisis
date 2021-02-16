@@ -15,7 +15,7 @@ class producto{
 		producto(){	precio_venta = 0;	}
 		void setprecio_venta(float _precio_venta){	precio_venta = _precio_venta;	}
 //		void setnombre(string _nombre){	nombre = _nombre;	}
-//		void setstock(int _stock){	stock = _stock;	}
+		void setstock(int _stock){	stock += _stock;	}
 //		void setcategoria(string _categoria){	categoria = _categoria;	}
 		
 		string getnombre()	{  return nombre;  }		
