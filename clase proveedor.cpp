@@ -1,26 +1,48 @@
 #include<iostream>
-#include<string.h>
+#include<stdlib.h>
 #include<string>
-using namespace std;
+#include "proveedor.h"
+#include "almacen.h"
 
-
-
-
-
-class Proveedor{
-	private:
-		char nombre_completo[40];
-		char telefono[12];
-		char nombre_de_la_empresa[30];
-		char categoria[15];
-	public:
-		Proveedor(char,char,char,char);
-		ingresar_dato();
-}; 
-
-Proveedor::Proveedor(char _nombre_completo, char _telefono, char _nombre_de_la_empresa, char _categoria){
-	nombre_completo = _nombre_completo;
-	telefono = _telefono;
-	nombre_de_la_empresa = _nombre_de_la_empresa;
-	categoria = _categoria;
+Proveedor::Proveedor(/*string _nombre_completo, string _telefono, string _nombre_de_la_empresa, string _categoria*/)
+{
+//	nombre_completo = _nombre_completo;
+//	telefono = _telefono;
+//	nombre_de_la_empresa = _nombre_de_la_empresa;
+//	categoria = _categoria;
 }
+proveedor::ingresar_proveedores()
+{
+	cout<<"ingresar el nombre completo: ";
+	cin>>nombre_completo;
+	
+	cout<<endl<<"ingresar el telefono: ";
+	cin>>telefono;
+	
+	cout<<"ingresar el nombre de la empresa del proveedor: ";
+	cin>>nombre_de_la_empresa;
+	
+	cout<<"ingresar la categoria del proveedor: ";
+	cin>>categoria;
+}
+proveedor::mostrar_proveedores()
+{
+	cout<<endl<<"nombre completo: "<<nombre_completo;
+	cout<<endl<<"ingresar el telefono: "<<telefono;
+	cout<<endl<<"nombre de la empresa del proveedor: "<<nombre_de_la_empresa;
+	cout<<endl<<"ingresar la categoria del proveedor: "<<categoria;
+}
+
+
+	
+
+
+
+
+
+
+
+
+
+
+

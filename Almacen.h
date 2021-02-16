@@ -29,6 +29,8 @@ class Almacen{
 //		void agregar_Factura(Factura*);
 		void buscar_Producto(string);
 		void eliminar_Producto(string);
+		
+		void busqueda_telefono(string);
 <<<<<<< HEAD
 //>>>>>>> a113f3870ae809d1b2284e8bf295e890231060b5
 =======
@@ -72,7 +74,39 @@ class Almacen{
 <<<<<<< HEAD
 //<<<<<<< HEAD
 	}
-	
+			else
+					{
+						swap(ListaProductos[i],ListaProducto[i+1]);
+					}*/
+					
+					cout<<endl<<"proveedor exitente";
+					ListaProveedor[i]->mostrar_proveedores();
+				}
+				else 
+				{
+					c=0;
+				}
+				 	
+			}	
+			
+			if(c==0)
+			{
+					cout<<endl<<"proveedor no existe"<<endl;
+					k.ingresar_proveedores();//registro de proveedores
+					ListaProveedor.push_back(&k);
+					cout<<endl<<endl<<"cantidad de proveedores: "<<ListaProveedor.size();
+				//	ListaProveedor[ListaProveedor.size()-1]->mostrar_proveedores();
+				//k.mostrar_proveedores();
+				cout<<endl<<endl;
+				
+				for(int i=0;i<ListaProveedor.size();i++)
+				{
+				ListaProveedor[i] -> mostrar_proveedores();
+				}		
+				
+			}
+		}
+	}
 //=======
 //	}*/
 =======
