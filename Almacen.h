@@ -4,11 +4,10 @@
 using namespace std;
 
 class producto;
-
 class Almacen{
 	private:
 		vector<producto*> ListaProductos;
-		vector<Factura*> ListaFacturas;
+	//	vector<Factura*> ListaFacturas;
 	public:
 		Almacen();
 		producto* getProducto();
@@ -16,15 +15,24 @@ class Almacen{
 		void visualizarFacturas();
 //		void visualizarProveedor(producto*);
 		void agregar_Producto(producto*);
+<<<<<<< HEAD
 //<<<<<<< HEAD
 		void agregar_Factura(Factura*);
 		void modificar_precio(string);
 		
 //=======
+=======
+	//	void agregar_Factura(Factura*);
+		void modificar_precio(string);
+		
+>>>>>>> 424501090c461a636a09b8e7bc937b20502e7721
 //		void agregar_Factura(Factura*);
-		void buscar_Producto(producto*);
+		void buscar_Producto(string);
 		void eliminar_Producto(string);
+<<<<<<< HEAD
 //>>>>>>> a113f3870ae809d1b2284e8bf295e890231060b5
+=======
+>>>>>>> 424501090c461a636a09b8e7bc937b20502e7721
 };
 	
 	Almacen::Almacen(){		
@@ -42,8 +50,16 @@ class Almacen{
 		}
 
 	}
+<<<<<<< HEAD
 		
 	void Almacen::visualizarFacturas(){
+=======
+	
+	Almacen::Almacen(){		
+	}
+	
+/*	void Almacen::visualizarFacturas(){
+>>>>>>> 424501090c461a636a09b8e7bc937b20502e7721
 		
 		if(ListaFacturas.size()>0){		
 			for(int i=0;i<ListaFacturas.size();i++){
@@ -53,11 +69,15 @@ class Almacen{
 		else{
 			cout<<"Aun no hay Facturas registradas"<<endl;
 		}
+<<<<<<< HEAD
 //<<<<<<< HEAD
 	}
 	
 //=======
 //	}*/
+=======
+}*/
+>>>>>>> 424501090c461a636a09b8e7bc937b20502e7721
 	void Almacen::eliminar_Producto(string _nombre)
 	{
 		int c=0;
@@ -84,14 +104,17 @@ class Almacen{
 			}	
 		}
 	}
+<<<<<<< HEAD
 //>>>>>>> a113f3870ae809d1b2284e8bf295e890231060b5
+=======
+>>>>>>> 424501090c461a636a09b8e7bc937b20502e7721
 	void Almacen::agregar_Producto(producto *product){
 		ListaProductos.push_back(product);
 	}
 
-	void Almacen::agregar_Factura(Factura *factu){
+/*	void Almacen::agregar_Factura(Factura *factu){
 		ListaFacturas.push_back(factu);
-	}
+	}*/
 	
 	void Almacen::modificar_precio(string nombre){
 		vector<producto*>::iterator p = ListaProductos.begin();
@@ -117,5 +140,36 @@ class Almacen{
 		if(band == 0){
 			cout<<"\nNo existe Producto"<<endl;
 		}
+	}
+	void Almacen::buscar_Producto(string nombre)
+	{
+		int i=0,c=0;
+		producto *a;
+		while (i!=ListaProductos.size()-1)
+		{
+			if(ListaProductos[i]->getnombre()==nombre)
+			{
+				cout<<"\nProducto encontrado ";
+				c=1;
+				break;
+			}
+			else
+			{
+				i++;
+			}
+		}
+		if(c==1)
+		{
+			int cantidad;
+			cout<<"ingrese el stock:";cin>>cantidad;
+			ListaProductos[i]->setstock(cantidad);
+		}
+		else
+		{
+			cout<<"\nSe va agregar un nuevo producto";
+			a->ingre_datos();
+			ListaProductos.push_back(a);
+		}
+		
 	}
 	
