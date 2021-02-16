@@ -26,6 +26,7 @@ class producto
 		producto(string,float,int,string,float);
 		void ingre_datos();
 		void mostrar_datos();
+		int setstock(int data){stock+=data;}
 };
 
 void producto::ingre_datos()

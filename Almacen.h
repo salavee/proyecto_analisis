@@ -4,12 +4,11 @@
 using namespace std;
 
 class producto;
-
 class Almacen{
 	private:
 		producto *Producto;
 		vector<producto*> ListaProductos;
-		vector<Factura*> ListaFacturas;
+	//	vector<Factura*> ListaFacturas;
 	public:
 		Almacen();
 		producto* getProducto();
@@ -17,15 +16,12 @@ class Almacen{
 		void visualizarFacturas();
 //		void visualizarProveedor(producto*);
 		void agregar_Producto(producto*);
-<<<<<<< HEAD
-		void agregar_Factura(Factura*);
+	//	void agregar_Factura(Factura*);
 		void modificar_precio(string);
 		
-=======
 //		void agregar_Factura(Factura*);
-		void buscar_Producto(producto*);
+		void buscar_Producto(string);
 		void eliminar_Producto(string);
->>>>>>> a113f3870ae809d1b2284e8bf295e890231060b5
 };
 
 	producto* Almacen::getProducto(){
@@ -48,7 +44,7 @@ class Almacen{
 	Almacen::Almacen(){		
 	}
 	
-	void Almacen::visualizarFacturas(){
+/*	void Almacen::visualizarFacturas(){
 		
 		if(ListaFacturas.size()>0){		
 			for(int i=0;i<ListaFacturas.size();i++){
@@ -58,11 +54,7 @@ class Almacen{
 		else{
 			cout<<"Aun no hay Facturas registradas"<<endl;
 		}
-<<<<<<< HEAD
-	}
-	
-=======
-	}*/
+}*/
 	void Almacen::eliminar_Producto(string _nombre)
 	{
 		int c=0;
@@ -89,14 +81,13 @@ class Almacen{
 			}	
 		}
 	}
->>>>>>> a113f3870ae809d1b2284e8bf295e890231060b5
 	void Almacen::agregar_Producto(producto *product){
 		ListaProductos.push_back(product);
 	}
 
-	void Almacen::agregar_Factura(Factura *factu){
+/*	void Almacen::agregar_Factura(Factura *factu){
 		ListaFacturas.push_back(factu);
-	}
+	}*/
 	
 	void Almacen::modificar_precio(string nombre){
 		vector<producto*>::iterator p = ListaProductos.begin();
@@ -115,5 +106,36 @@ class Almacen{
 			} 
 			i++;
 		}
+	}
+	void Almacen::buscar_Producto(string nombre)
+	{
+		int i=0,c=0;
+		producto *a;
+		while (i!=ListaProductos.size()-1)
+		{
+			if(ListaProductos[i]->getnombre()==nombre)
+			{
+				cout<<"\nProducto encontrado ";
+				c=1;
+				break;
+			}
+			else
+			{
+				i++;
+			}
+		}
+		if(c==1)
+		{
+			int cantidad;
+			cout<<"ingrese el stock:";cin>>cantidad;
+			ListaProductos[i]->setstock(cantidad);
+		}
+		else
+		{
+			cout<<"\nSe va agregar un nuevo producto";
+			a->ingre_datos();
+			ListaProductos.push_back(a);
+		}
+		
 	}
 	
