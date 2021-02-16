@@ -29,7 +29,13 @@ class Almacen{
 //		void agregar_Factura(Factura*);
 		void buscar_Producto(string);
 		void eliminar_Producto(string);
+<<<<<<< HEAD
 //<<<<<<< HEAD
+=======
+		
+		void busqueda_telefono(string);
+<<<<<<< HEAD
+>>>>>>> 682a0b3297e186ee2c5bb7cd8dcb62578c0946e9
 //>>>>>>> a113f3870ae809d1b2284e8bf295e890231060b5
 ///=======
 //>>>>>>> 424501090c461a636a09b8e7bc937b20502e7721
@@ -72,7 +78,39 @@ class Almacen{
 <<<<<<< HEAD
 //<<<<<<< HEAD
 	}
-	
+			else
+					{
+						swap(ListaProductos[i],ListaProducto[i+1]);
+					}*/
+					
+					cout<<endl<<"proveedor exitente";
+					ListaProveedor[i]->mostrar_proveedores();
+				}
+				else 
+				{
+					c=0;
+				}
+				 	
+			}	
+			
+			if(c==0)
+			{
+					cout<<endl<<"proveedor no existe"<<endl;
+					k.ingresar_proveedores();//registro de proveedores
+					ListaProveedor.push_back(&k);
+					cout<<endl<<endl<<"cantidad de proveedores: "<<ListaProveedor.size();
+				//	ListaProveedor[ListaProveedor.size()-1]->mostrar_proveedores();
+				//k.mostrar_proveedores();
+				cout<<endl<<endl;
+				
+				for(int i=0;i<ListaProveedor.size();i++)
+				{
+				ListaProveedor[i] -> mostrar_proveedores();
+				}		
+				
+			}
+		}
+	}
 //=======
 //	}*/
 //=======
