@@ -57,3 +57,13 @@ void producto::mostrar_datos()
 	cout<<endl<<"Precio d/venta: "<<precio_venta<<endl<<endl;
 //	cout<<endl<<estado;
 }
+#ifndef PRODUCTO_H
+#define PRODUCTO_H
+
+class producto
+{
+	public:
+	protected:
+};
+
+#endif
