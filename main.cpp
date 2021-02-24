@@ -48,7 +48,16 @@ int main()
 	A1.visualizarProductos();
 	a.actualizar(&A1);
 	A1.visualizarProductos();
+	
+	Factura factura1(1551515,105,"Maximo Frutera","Av.San Jose.051","18/02/2021","(051)-982369541",152.05);
+	Factura factura2(6198892,152,"Benito Caram","Av.Mayarco-095","21/02/2021","(051)-986486321",2579.84);
+	Factura factura3(6198892,152,"Morales Cerezas","Asociacion Av.Numeral.502","14/02/2021","(051)-984362589",56.30);
+	A1.agregar_Factura(&factura1);
+	A1.agregar_Factura(&factura2);
+	A1.agregar_Factura(&factura3);
+	//A1.visualizarFacturas();
 	getch();
+	
 	
 	//fact1.IngresarFactura();
 	//A1.agregar_Factura(&fact1);
