@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include "producto.h"
+#include "factu.h"
 using namespace std;
 class Almacen{
 	private:
@@ -13,6 +14,8 @@ class Almacen{
 		Almacen();
 		//producto* getProducto();
 		void visualizarProductos();
+		void visualizarFacturas();
+//		void agregar_Factura(Factura*);
 		//void visualizarFacturas();
 //		void visualizarProveedor(producto*);
 		void agregar_Producto(producto*);
@@ -25,6 +28,24 @@ class Almacen{
 		void eliminar_Producto(string);
 	//	void busqueda_telefono(string);
 };
+
+void Almacen::visualizarFacturas(){
+		
+		if(ListaFacturas.size()>0){		
+			for(int i=0;i<ListaFacturas.size();i++){
+				cout<<"Factura ["<<i+1<<"]"<<endl<<endl;
+				ListaFacturas[i] -> MostrarFactura();
+				cout<<endl<<endl;
+			}		
+		}
+		else{
+			cout<<"Aun no hay Facturas registradas"<<endl;
+		}
+	}
+	
+	void Almacen::agregar_Factura(Factura *factu){
+		ListaFacturas.push_back(factu);
+	}
 /*	void Almacen::agregar_Factura(Factura *factu){
 		ListaFacturas.push_back(factu);
 	}*/
